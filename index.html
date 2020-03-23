@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Amazon POD Price Simulator</title>
+    <script type="text/javascript">
+      function calc(){
+        var price = document.form.price.value;
+        var page = document.form.page.value;
+        var revenue = price - (page * 2.5 + 180);
+        document.form.revenue.value = revenue;
+        var sell = document.form.sell.value;
+        document.form.total.value = revenue * sell;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Amazon POD Price Simulator</h1>
+    <form action="#" name="form">
+      <p>【入力】販売価格：<input type="number" name="price" size="8" value="0" onChange="calc()"> 円</p>
+      <p>【入力】モノクロ：<input type="number" name="page" size="8" value="0" onChange="calc()"> ページ</p>
+      <p>【出力】利益：<input type="number" name="revenue" size="8" value="0"> 円/冊</p>
+      <p>【入力】販売部数：<input type="number" name="sell" size="8" value="0" onChange="calc()"> 冊</p>
+      <p>【出力】利益合計：<input type="number" name="total" size="16" value="0"> 円</p>
+    </form>
+  </body>
+</html>
